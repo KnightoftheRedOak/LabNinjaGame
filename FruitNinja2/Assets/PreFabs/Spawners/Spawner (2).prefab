@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8095413311834315561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8095413311834315566}
+  - component: {fileID: 8095413311834315567}
+  - component: {fileID: 8095413311834315560}
+  m_Layer: 0
+  m_Name: Spawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8095413311834315566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8095413311834315561}
+  m_LocalRotation: {x: -0, y: -0, z: -0.1362519, w: 0.99067426}
+  m_LocalPosition: {x: -5.69, y: -6.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.662}
+--- !u!61 &8095413311834315567
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8095413311834315561}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09651923, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15.931538, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &8095413311834315560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8095413311834315561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccdbb7ce8d89c564cbf09ca07176286e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitPreFabs:
+  - {fileID: 3982875685522079796, guid: 43c6f79c6a085214a9f7f43e343a1bbf, type: 3}
+  - {fileID: 6218235132902941387, guid: 3286c4936f5760b4c9833ce17faad61e, type: 3}
+  - {fileID: 8498119918493950418, guid: 4777fe7241e41a740b469f4619a21b5d, type: 3}
+  - {fileID: 4633518136894082280, guid: 5199d9cfee8daf047b1adc68a9490b83, type: 3}
+  - {fileID: 2456443275275823144, guid: 782aee4915cebc64aacb850ef675afd0, type: 3}
+  plateToBeSliced: {fileID: 0}
+  bombPreFab: {fileID: 1895867779119074840, guid: e51207ff464a5aa49a8be0327da0534d, type: 3}
+  spawner2: {fileID: 0}
+  spawner3: {fileID: 0}
+  frenzyTime: 0
+  bombChance: 0.08
+  chosenPlateChance: 5
+  minSpawnDelay: 0.25
+  maxSpawnDelay: 1
+  minAngle: -15
+  maxAngle: 15
+  minForce: 10
+  maxForce: 15
+  maxLifeTime: 5
