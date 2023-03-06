@@ -47,6 +47,6 @@ public class GameManager : MonoBehaviour
     {
         // blade.enabled = false;
         //spawner.enabled = false;
-        Debug.Log("You have hit the bomb!");
+        Debug.Log("You have hit the bomb");
     }
 }
