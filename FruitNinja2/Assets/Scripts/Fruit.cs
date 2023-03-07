@@ -46,13 +46,44 @@ public class Fruit : MonoBehaviour
             if (Spawner.instance.plateToBeSliced.tag == gameObject.tag)
             {
                 Slice();
+
+                IdentifyPlateType();
+               
             }
             else 
             {
                // Debug.Log("Wrong Fruit");
+               // Take away from Players health here(sprite character)
             }
-            
+
             
         }
     }
+           
+    public void IdentifyPlateType() 
+    {
+        switch (gameObject.tag)
+        {
+            case "BloodPlate":
+                Debug.Log("Hitting bloodPlate can spawn pink worm");
+                break;
+            case "Chocolate":
+                Debug.Log("Hitting Chocolate Plate");
+                break;
+            case "CNA":
+                Debug.Log("Hitting  CNA Plate");
+                break;
+            case "Mac":
+                Debug.Log("Hitting Mac Plate");
+                break;
+            default:
+                Debug.Log("Unknown material being hit");
+                break;
+        }
+    }
 }
+            
+
+               
+               
+
