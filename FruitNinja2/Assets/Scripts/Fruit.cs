@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Fruit : MonoBehaviour
@@ -11,6 +12,10 @@ public class Fruit : MonoBehaviour
     private Collider2D fruitColider;
 
     public GameObject impactEffect;
+
+    public int canSpawnChance;
+    private int rateOfChance = 5;//change this number to increase or decrease chance of bacteria spawning
+    public bool canSpawn;
 
     private void Awake()
     {
@@ -62,10 +67,24 @@ public class Fruit : MonoBehaviour
            
     public void IdentifyPlateType() 
     {
+        canSpawnChance = Random.Range(1, 10);
+        Debug.Log(canSpawnChance);
+
+        if (canSpawnChance <= rateOfChance)
+        {
+            canSpawn = true;
+        }
+        else 
+        {
+            canSpawn = false;
+        }
         switch (gameObject.tag)
         {
             case "BloodPlate":
-                Debug.Log("Hitting bloodPlate can spawn pink worm");
+                if (canSpawn) 
+                {
+                    Debug.Log("Hitting bloodPlate can spawn pink worm");
+                }
                 break;
             case "Chocolate":
                 Debug.Log("Hitting Chocolate Plate");

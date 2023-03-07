@@ -172,6 +172,9 @@ MonoBehaviour:
   c2: {fileID: 799990429014249992}
   sliced: {fileID: 4297552728983315823}
   impactEffect: {fileID: 5503852238318281615, guid: 09989eaa54e26b744a0201101cf6d699, type: 3}
+  canSpawnChance: 0
+  rateOfChance: 10
+  canSpawn: 0
 --- !u!1001 &3765751362161789944
 PrefabInstance:
   m_ObjectHideFlags: 0
