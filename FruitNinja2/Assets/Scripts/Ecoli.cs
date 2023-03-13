@@ -10,11 +10,15 @@ public class Ecoli : MonoBehaviour
     public float moveTime, waitTime;
     public bool canMoveDown = true;
     private float moveCounter, waitCounter;
+    private int maxHealth = 3;
+    public int currentHealth;
+    public GameObject explosion;
    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         waitCounter = waitTime;
+        currentHealth = maxHealth;
        
     }
 
@@ -59,14 +63,26 @@ public class Ecoli : MonoBehaviour
         }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -7f,7f),Mathf.Clamp(transform.position.y, -3f, 3f), transform.position.z);
+
+       
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Ecoli") 
+        if (other.tag == "Ecoli")
         {
             newDirection();
             //Debug.Log("Hitting other Ecoli");
+        }
+
+        if (other.tag == "Player")
+        {
+            currentHealth--;
+            if (currentHealth <= 0)
+            {
+                Instantiate(explosion, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
         }
     }
 
