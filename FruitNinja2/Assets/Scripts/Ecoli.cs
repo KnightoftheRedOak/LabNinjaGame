@@ -13,6 +13,12 @@ public class Ecoli : MonoBehaviour
     private int maxHealth = 3;
     public int currentHealth;
     public GameObject explosion;
+    public GameObject obstacleRayObjectX;
+    public GameObject obstacleRayObjectY;
+    public float characterDirectionX;
+    public float characterDirectionY;
+    public float obstacleRayDistance;
+    public bool canChangeDirection;
    
     void Start()
     {
@@ -25,6 +31,64 @@ public class Ecoli : MonoBehaviour
    
     void Update()
     {
+        if (rb.velocity.x < 0)
+        {
+            characterDirectionX = -1f;
+        }
+        else if (rb.velocity.x > 0)
+        {
+            characterDirectionX = 1f;
+        }
+        else 
+        {
+            characterDirectionX = 0;
+        }
+
+        if (rb.velocity.y < 0)
+        {
+            characterDirectionY = -1f;
+        }
+        else if (rb.velocity.y > 0)
+        {
+            characterDirectionY = -1f;
+        }
+        else 
+        {
+            characterDirectionY = 0;
+        }
+
+        RaycastHit2D hitobsticleX =  Physics2D.Raycast(obstacleRayObjectX.transform.position,Vector2.right * new Vector2(characterDirectionX,0f),obstacleRayDistance);
+        RaycastHit2D hitobsticleY = Physics2D.Raycast(obstacleRayObjectY.transform.position, Vector2.up * new Vector2(characterDirectionY, 0f), obstacleRayDistance);
+        
+        if (hitobsticleX.collider != null) 
+        {
+            Debug.Log("other e.coli encountered");
+            canChangeDirection = true;
+           
+            
+            if (canChangeDirection) 
+            { 
+                newDirection();
+            }
+            
+           
+        }
+
+        if (hitobsticleY.collider != null)
+        {
+            Debug.Log("other e.coli encountered");
+            canChangeDirection = true;
+           
+
+            if (canChangeDirection)
+            {
+                newDirection();
+            }
+
+
+        }
+
+
         if (waitCounter > 0)
         {
             waitCounter -= Time.deltaTime;
@@ -69,7 +133,7 @@ public class Ecoli : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Ecoli")
+       if (other.tag == "Ecoli")
         {
             newDirection();
             //Debug.Log("Hitting other Ecoli");
@@ -89,6 +153,7 @@ public class Ecoli : MonoBehaviour
     public void newDirection() 
     {
         movement = new Vector2(Random.Range(-6, 6), Random.Range(-6, 6)).normalized;
+        canChangeDirection = false;
     }
 
     
