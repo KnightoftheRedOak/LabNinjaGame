@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320368829}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ObstcleRayObjectX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1939934758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ObstacleRayObjectY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 195644095486181376}
   - component: {fileID: 195644095486181383}
   - component: {fileID: 195644095486181382}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'Ecoli  '
   m_TagString: Ecoli
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &195644095486181382
 MonoBehaviour:
@@ -140,6 +140,10 @@ MonoBehaviour:
   characterDirectionX: 0
   characterDirectionY: 0
   obstacleRayDistance: 2
+  canChangeDirection: 0
+  whatIsEcoli:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &195644096016538301
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +156,7 @@ GameObject:
   - component: {fileID: 195644096016538297}
   - component: {fileID: 195644096016538296}
   - component: {fileID: 195644096016538303}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

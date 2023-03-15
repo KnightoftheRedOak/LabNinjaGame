@@ -154,6 +154,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5c503329c676b0340952b5ad17bc175a, type: 3}
   - {fileID: 21300000, guid: 78047b4bd5f72504abd22fc367602886, type: 3}
   - {fileID: 21300000, guid: 773ad9829e007284a8c0bed263a58c70, type: 3}
+  - {fileID: 21300000, guid: 914cbd393b4a5764ea8a800f82c7cffe, type: 3}
   canChangeExpression: 1
 --- !u!1001 &854206748971430192
 PrefabInstance:

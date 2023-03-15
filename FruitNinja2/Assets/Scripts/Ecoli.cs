@@ -19,6 +19,7 @@ public class Ecoli : MonoBehaviour
     public float characterDirectionY;
     public float obstacleRayDistance;
     public bool canChangeDirection;
+    public LayerMask whatIsEcoli;
    
     void Start()
     {
@@ -31,7 +32,7 @@ public class Ecoli : MonoBehaviour
    
     void Update()
     {
-        if (rb.velocity.x < 0)
+       /* if (rb.velocity.x < 0)
         {
             characterDirectionX = -1f;
         }
@@ -57,8 +58,8 @@ public class Ecoli : MonoBehaviour
             characterDirectionY = 0;
         }
 
-        RaycastHit2D hitobsticleX =  Physics2D.Raycast(obstacleRayObjectX.transform.position,Vector2.right * new Vector2(characterDirectionX,0f),obstacleRayDistance);
-        RaycastHit2D hitobsticleY = Physics2D.Raycast(obstacleRayObjectY.transform.position, Vector2.up * new Vector2(characterDirectionY, 0f), obstacleRayDistance);
+        RaycastHit2D hitobsticleX =  Physics2D.Raycast(obstacleRayObjectX.transform.position,Vector2.right * new Vector2(characterDirectionX,0f),whatIsEcoli);
+        RaycastHit2D hitobsticleY = Physics2D.Raycast(obstacleRayObjectY.transform.position, Vector2.up * new Vector2(characterDirectionY, 0f), whatIsEcoli);
         
         if (hitobsticleX.collider != null) 
         {
@@ -86,7 +87,7 @@ public class Ecoli : MonoBehaviour
             }
 
 
-        }
+        }*/
 
 
         if (waitCounter > 0)
@@ -153,7 +154,7 @@ public class Ecoli : MonoBehaviour
     public void newDirection() 
     {
         movement = new Vector2(Random.Range(-6, 6), Random.Range(-6, 6)).normalized;
-        canChangeDirection = false;
+        //canChangeDirection = false;
     }
 
     
