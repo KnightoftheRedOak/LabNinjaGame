@@ -10,7 +10,7 @@ public class Ecoli : MonoBehaviour
     public float moveTime, waitTime;
     public bool canMoveDown = true;
     private float moveCounter, waitCounter;
-    private int maxHealth = 3;
+    private int maxHealth = 5;
     public int currentHealth;
     public GameObject explosion;
     public GameObject obstacleRayObjectX;
@@ -20,6 +20,7 @@ public class Ecoli : MonoBehaviour
     public float obstacleRayDistance;
     public bool canChangeDirection;
     public LayerMask whatIsEcoli;
+    public GameObject impactEffect;
    
     void Start()
     {
@@ -137,13 +138,14 @@ public class Ecoli : MonoBehaviour
        if (other.tag == "Ecoli")
         {
             newDirection();
-            //Debug.Log("Hitting other Ecoli");
+            Debug.Log("Hitting other Ecoli");
         }
 
         if (other.tag == "Player")
         {
             currentHealth--;
-            if (currentHealth <= 0)
+            Instantiate(impactEffect, other.transform.position,transform.rotation);
+            if (currentHealth == 0)
             {
                 Instantiate(explosion, transform.position, transform.rotation);
                 Destroy(gameObject);

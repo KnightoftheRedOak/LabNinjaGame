@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1320368829
 Transform:
   m_ObjectHideFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1939934758
 Transform:
   m_ObjectHideFlags: 0
@@ -144,6 +144,7 @@ MonoBehaviour:
   whatIsEcoli:
     serializedVersion: 2
     m_Bits: 128
+  impactEffect: {fileID: 8530692246144996450, guid: 34c3764a9e937704899272a71211fa41, type: 3}
 --- !u!1 &195644096016538301
 GameObject:
   m_ObjectHideFlags: 0

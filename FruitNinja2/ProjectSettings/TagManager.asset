@@ -10,6 +10,7 @@ TagManager:
   - Chocolate
   - CNA
   - Ecoli
+  - ecoli
   layers:
   - Default
   - TransparentFX
