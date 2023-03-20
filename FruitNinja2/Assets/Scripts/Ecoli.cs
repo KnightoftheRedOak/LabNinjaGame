@@ -144,7 +144,8 @@ public class Ecoli : MonoBehaviour
         if (other.tag == "Player")
         {
             currentHealth--;
-            Instantiate(impactEffect, other.transform.position,transform.rotation);
+            //put switch statement here for current health..will impact camera shake and what sprite is appearing for damage amount
+            Instantiate(impactEffect,transform.position,transform.rotation);
             if (currentHealth == 0)
             {
                 Instantiate(explosion, transform.position, transform.rotation);

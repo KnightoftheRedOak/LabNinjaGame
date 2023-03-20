@@ -51,6 +51,7 @@ public class Fruit : MonoBehaviour
             if (Spawner.instance.plateToBeSliced.tag == gameObject.tag)
             {
                 Slice();
+                CameraController.instance.shakeCamera(1f);
 
                 IdentifyPlateType();
                
@@ -83,20 +84,20 @@ public class Fruit : MonoBehaviour
             case "BloodPlate":
                 if (canSpawn) 
                 {
-                    Debug.Log("Hitting bloodPlate can spawn pink worm");
+                  // Debug.Log("Hitting bloodPlate can spawn pink worm");
                 }
                 break;
             case "Chocolate":
-                Debug.Log("Hitting Chocolate Plate");
+               // Debug.Log("Hitting Chocolate Plate");
                 break;
             case "CNA":
-                Debug.Log("Hitting  CNA Plate");
+               // Debug.Log("Hitting  CNA Plate");
                 break;
             case "Mac":
-                Debug.Log("Hitting Mac Plate");
+               // Debug.Log("Hitting Mac Plate");
                 break;
             default:
-                Debug.Log("Unknown material being hit");
+                //Debug.Log("Unknown material being hit");
                 break;
         }
     }
