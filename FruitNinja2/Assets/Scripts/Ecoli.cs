@@ -10,7 +10,7 @@ public class Ecoli : MonoBehaviour
     public float moveTime, waitTime;
     public bool canMoveDown = true;
     private float moveCounter, waitCounter;
-    private int maxHealth = 5;
+    private int maxHealth = 3;
     public int currentHealth;
     public GameObject explosion;
     public GameObject obstacleRayObjectX;
@@ -21,6 +21,7 @@ public class Ecoli : MonoBehaviour
     public bool canChangeDirection;
     public LayerMask whatIsEcoli;
     public GameObject impactEffect;
+    public Animator anim;
    
     void Start()
     {
@@ -144,8 +145,26 @@ public class Ecoli : MonoBehaviour
         if (other.tag == "Player")
         {
             currentHealth--;
-            //put switch statement here for current health..will impact camera shake and what sprite is appearing for damage amount
             Instantiate(impactEffect,transform.position,transform.rotation);
+            anim.SetBool("isHurt", true);
+            //put switch statement here for current health..will impact camera shake and what sprite is appearing for damage amount
+            switch (currentHealth) 
+            {
+                case 2:
+                    CameraController.instance.shakeCamera(1f);
+                    moveSpeed += .5f;
+                    break;
+
+                case 1:
+                    CameraController.instance.shakeCamera(1.5f);
+                    moveSpeed += .5f;
+                    break;
+               
+                case 0:
+                    CameraController.instance.shakeCamera(2f);
+
+                    break;
+            }
             if (currentHealth == 0)
             {
                 Instantiate(explosion, transform.position, transform.rotation);
