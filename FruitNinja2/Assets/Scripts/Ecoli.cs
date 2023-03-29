@@ -146,18 +146,20 @@ public class Ecoli : MonoBehaviour
         {
             currentHealth--;
             Instantiate(impactEffect,transform.position,transform.rotation);
-            anim.SetBool("isHurt", true);
+            //anim.SetBool("isHurt", true);
             //put switch statement here for current health..will impact camera shake and what sprite is appearing for damage amount
             switch (currentHealth) 
             {
                 case 2:
                     CameraController.instance.shakeCamera(1f);
                     moveSpeed += .5f;
+                    anim.SetBool("1stPhaseHealth", true);
                     break;
 
                 case 1:
                     CameraController.instance.shakeCamera(1.5f);
                     moveSpeed += .5f;
+                    anim.SetBool("isHurt", true);
                     break;
                
                 case 0:
