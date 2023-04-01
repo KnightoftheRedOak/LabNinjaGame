@@ -139,7 +139,7 @@ public class Ecoli : MonoBehaviour
        if (other.tag == "Ecoli")
         {
             newDirection();
-            Debug.Log("Hitting other Ecoli");
+           // Debug.Log("Hitting other Ecoli");
         }
 
         if (other.tag == "Player")
