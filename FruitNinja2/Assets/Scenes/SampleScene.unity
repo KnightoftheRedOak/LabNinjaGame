@@ -464,7 +464,7 @@ MonoBehaviour:
   wayPointIndex: 0
   movement: {x: 0, y: 0}
   firstBodyPart: {fileID: 2969302830719885525, guid: 1b41ede6b9e451345bebc583e85e2147, type: 3}
-  timeBtwnSpawns: 0.15
+  timeBtwnSpawns: 0.19
 --- !u!50 &451279598
 Rigidbody2D:
   serializedVersion: 4
