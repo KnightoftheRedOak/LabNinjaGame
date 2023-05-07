@@ -463,7 +463,7 @@ MonoBehaviour:
   - {fileID: 1214565520}
   wayPointIndex: 0
   movement: {x: 0, y: 0}
-  firstBodyPart: {fileID: 2969302830719885525, guid: 1b41ede6b9e451345bebc583e85e2147, type: 3}
+  firstBodyPart: {fileID: 3818299635479171239, guid: 997dbc61adcf79f4d9ea88892155a3ca, type: 3}
   timeBtwnSpawns: 0.19
 --- !u!50 &451279598
 Rigidbody2D:
@@ -10879,7 +10879,7 @@ SpriteRenderer:
   m_SortingLayerID: -124065419
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dfd81a009b0b0514fba3e017e8acca26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 830750097513f494a93cfa0335eecc89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
