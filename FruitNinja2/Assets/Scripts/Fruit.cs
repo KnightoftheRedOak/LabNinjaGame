@@ -50,16 +50,20 @@ public class Fruit : MonoBehaviour
         {
             if (Spawner.instance.plateToBeSliced.tag == gameObject.tag)
             {
+                //ShinobiController.instance.anim.SetTrigger("isSlicing");
+                ShinobiController.instance.correctPlate = true;
                 Slice();
                 CameraController.instance.shakeCamera(1f);
 
                 IdentifyPlateType();
+                
                
             }
             else 
             {
-               // Debug.Log("Wrong Fruit");
-               // Take away from Players health here(sprite character)
+                // Debug.Log("Wrong Fruit");
+                // Take away from Players health here(sprite character)
+                ShinobiController.instance.correctPlate = false;
             }
 
             
@@ -69,7 +73,7 @@ public class Fruit : MonoBehaviour
     public void IdentifyPlateType() 
     {
         canSpawnChance = Random.Range(1, 10);
-        Debug.Log(canSpawnChance);
+       // Debug.Log(canSpawnChance);
 
         if (canSpawnChance <= rateOfChance)
         {

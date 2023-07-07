@@ -11,8 +11,10 @@ public class Blade : MonoBehaviour
     public Vector3 direction;
     public float sliceForce = 15f;
     public float minSliceVelocity = 0.01f;
+    public static Blade instance;
     private void Awake()
     {
+        instance = this;
         mainCamera = Camera.main;
         bladeCollider = GetComponent<CapsuleCollider2D>();
         trailOne = GetComponentInChildren<ParticleSystem>();

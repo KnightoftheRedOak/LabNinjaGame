@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 6301693873993502519}
   - component: {fileID: 3369479693054764417}
   - component: {fileID: 4684293237568689665}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CNAWholeAndSlicedPlate
   m_TagString: CNA
   m_Icon: {fileID: 0}
@@ -348,6 +348,8 @@ MonoBehaviour:
   c2: {fileID: 2015683043439375453}
   sliced: {fileID: 3003613352929805623}
   impactEffect: {fileID: 9071162956872073005, guid: 857399dd978e53048ba1ccd121e02f13, type: 3}
+  canSpawnChance: 0
+  canSpawn: 0
 --- !u!1 &3003613352929805623
 GameObject:
   m_ObjectHideFlags: 0

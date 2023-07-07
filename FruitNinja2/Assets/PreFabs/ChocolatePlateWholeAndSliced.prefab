@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 2204630425757741962}
   - component: {fileID: 291964102878020235}
   - component: {fileID: 2462900820744900179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ChocolatePlateWholeAndSliced
   m_TagString: Chocolate
   m_Icon: {fileID: 0}
@@ -276,6 +276,8 @@ MonoBehaviour:
   c2: {fileID: 8568601903147903583}
   sliced: {fileID: 4033463321935544427}
   impactEffect: {fileID: 2123410768458999042, guid: 6e866d0792e5ce64583457829a49964e, type: 3}
+  canSpawnChance: 0
+  canSpawn: 0
 --- !u!1 &8568601903147903583
 GameObject:
   m_ObjectHideFlags: 0

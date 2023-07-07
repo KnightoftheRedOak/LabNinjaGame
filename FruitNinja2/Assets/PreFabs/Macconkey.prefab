@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8498119918493950416}
   - component: {fileID: 8498119918493950417}
   - component: {fileID: 8239862032966584150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Macconkey
   m_TagString: Mac
   m_Icon: {fileID: 0}
@@ -172,6 +172,8 @@ MonoBehaviour:
   c2: {fileID: 7026441953420808292}
   sliced: {fileID: 6311156372795879534}
   impactEffect: {fileID: 6056409729253965488, guid: 69b8dcda2c9cfbd488594d8db8cda156, type: 3}
+  canSpawnChance: 0
+  canSpawn: 0
 --- !u!1001 &325250549144403329
 PrefabInstance:
   m_ObjectHideFlags: 0
