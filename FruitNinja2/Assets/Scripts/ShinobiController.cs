@@ -54,10 +54,7 @@ public class ShinobiController : MonoBehaviour
                 {
                     anim.SetTrigger("Throw");
                 }
-                else if(isOnPlate && Vector2.Distance(transform.position, Blade.instance.transform.position) < throwDistance) 
-                {
-                    anim.SetTrigger("isSlicing");
-                }
+                
             }
         }
                 
@@ -99,6 +96,16 @@ public class ShinobiController : MonoBehaviour
             {
                 isMouseButtonPressed = false; // Stop the movement
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == Spawner.instance.plateToBeSliced.gameObject.tag && isMouseButtonPressed) 
+        {
+            anim.SetTrigger("isSlicing");
+            Debug.Log("attack plate!");
+            other.GetComponent<Fruit>().Slice();
         }
     }
 

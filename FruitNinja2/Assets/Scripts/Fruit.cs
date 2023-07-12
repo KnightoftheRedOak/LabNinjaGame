@@ -23,7 +23,7 @@ public class Fruit : MonoBehaviour
         fruitColider = GetComponent<Collider2D>();
     }
 
-    private void Slice() 
+    public void Slice() 
     {
         GameManager.instance.IncreaseScore();
         sliced.transform.parent = null;
@@ -52,7 +52,7 @@ public class Fruit : MonoBehaviour
             {
                 //ShinobiController.instance.anim.SetTrigger("isSlicing");
                 ShinobiController.instance.correctPlate = true;
-                Slice();
+                //Slice();
                 CameraController.instance.shakeCamera(1f);
 
                 IdentifyPlateType();
